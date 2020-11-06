@@ -13,7 +13,7 @@ function start(data){
     req.setRequestHeader('Content-type','application/x-www-form-urlencoded')
     req.onload = function(){
         if(this.status = 200){
-            console.log('request send',this.responseText);
+            
             const display = document.getElementById('msg');
             display.className = "alert alert-warning";
             display.innerText = "Todo Saved"
