@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.jumb{
+    background-color: #333;
+    margin-top: 1em;
+    padding: 1em;
+}
+.jumb h2{
+    color: white;
+}
+ul{
+    list-style: none;
+}
+
+.draggable{
+    padding: 1em;
+    background-color: white;
+    border: 1px solid #eee;
+    cursor: move;
+    margin: 1em;
+}
+.draggable.dragging{
+    opacity: .2;
+}

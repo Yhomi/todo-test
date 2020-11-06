@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo task</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div id="msg"></div>
+                <h1>Todo Task</h1>
+                <div class="card">
+                    <div class="card-header bg-grey">
+                        <h4>What Todo</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="" id="addForm">
+                            <div class="form-group mt-2 pl-5">
+                                <label for="">Title of Task</label>
+                                <input type="text" id="todo" placeholder="Enter todo..." class="form-control" required >
+                            </div>
+                            
+                            <button type="submit" id="submit" class="btn btn-primary btn-sm">Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="jumb mt-4">
+                    <h2>Todo Lists</h2>
+                    <ul class="list-group" id="items">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
