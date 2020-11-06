@@ -1,6 +1,8 @@
 var form  = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 
+document.addEventListener("DOMContentLoaded", loadTodos )
+
 form.addEventListener('submit',addTodo);
 itemList.addEventListener('click',removeItem)
 
@@ -55,8 +57,26 @@ function removeItem(e){
         }
     }
 }
-
-
+// window.onload = function() {
+//     loadTodos();
+//   };
+function loadTodos(){
+    const req = new XMLHttpRequest();
+    req.open('GET','inc/server.php',true)
+    req.onload = function(){
+        if(this.status == 200){
+            let todos = JSON.parse(this.responseText)
+            let output = '';
+            todos.forEach(todo=>{
+                output += `
+                    <li class="draggable" draggable=true>${todo.todo} <button class="btn btn-danger btn-sm float-right del">X</button></li>
+                `
+            })
+            document.getElementById('items').innerHTML = output
+        }
+    }
+    req.send()
+}
 
 
 
@@ -75,7 +95,7 @@ itemList.addEventListener('dragover',(e)=>{
     const draggable = document.querySelector('.dragging')
     const afterElement = getDragAfterElement(draggable,e.clientY)
        
-       console.log(afterElement);
+       
        if(afterElement == null){
             itemList.appendChild(draggable)
        }else{
@@ -86,7 +106,7 @@ itemList.addEventListener('dragover',(e)=>{
 
 function getDragAfterElement(draggables,y){
     const draggableElements = [...document.querySelectorAll('.draggable:not(.dragging)')]
-    console.log('Dragable',draggableElements);
+    
 
     return draggableElements.reduce((closest,child)=>{
         const box = child.getBoundingClientRect()
