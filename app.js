@@ -16,7 +16,7 @@ function start(data){
             console.log('request send',this.responseText);
             const display = document.getElementById('msg');
             display.className = "alert alert-warning";
-            display.innerText = this.responseText
+            display.innerText = "Todo Saved"
         }
     }
     req.send(param)
