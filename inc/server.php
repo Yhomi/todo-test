@@ -1,8 +1,8 @@
 <?php
-    $hostName = 'localhost';
-    $dbName = 'todo';
-    $userName = 'root';
-    $pwd =  '';
+    $hostName = 'mysql:host=us-cdbr-east-02.cleardb.com';
+    $dbName = 'heroku_6f8c55e3d238645';
+    $userName = 'b0d8b17f3e35b8';
+    $pwd =  'ef8c441b';
 
     $conn = new mysqli($hostName,$userName,$pwd,$dbName);
 
